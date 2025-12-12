@@ -33,7 +33,7 @@
 `include "ip_amba_apb4_s_top_defines.vh"
 `include "ip_amba_apb4_s_top_parameters.vh"
 
-module ip_amba_apb4_s_top `IP_AMBA_APB4_SLAVE_PARAM_DECL (  
+module ip_amba_apb4_s_top `APB4_SLV_DESIGN_ATTRIBUTES (  
 
     // APB Interface Side Signals
     // Global Inputs

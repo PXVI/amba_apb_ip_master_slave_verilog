@@ -48,7 +48,7 @@
 // + RLT Tested Againt A Stable VIP. Bug Free as of 14 January, 2020 [11:25:38 AM IST]
 // ++++++++++++++++++
 
-module ip_amba_apb_slave_top `IP_AMBA_APB_SLAVE_PARAM_DECL (  
+module ip_amba_apb_slave_top `APB3_SLV_DESIGN_ATTRIBUTES (  
 
     // APB Interface Side Signals
     // Global Inputs

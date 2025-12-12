@@ -30,14 +30,14 @@
 
  * ----------------------------------------------------------------------------------- */
 
-`define PSTRB_width         4
-`define PWDATA_width        8 * `PSTRB_width
-`define PRDATA_width        32
-`define PADDR_width         32
-`define PSELx_width         1
+`define APB4_SLV_PSTRB_WIDTH         4
+`define APB4_SLV_PWDATA_WIDTH        8 * `APB4_SLV_PSTRB_WIDTH
+`define APB4_SLV_PRDATA_WIDTH        32
+`define APB4_SLV_PADDR_WIDTH         32
+`define APB4_SLV_PSEL_WIDTH         1
 
 // By default the Memory Depth is 2**MEM_ARRAY_SIZE_INT
-`define MEM_ARRAY_SIZE_INT  2
+`define APB4_SLV_MEM_ARRAY_SIZE_INT  2
 
 // By Default the Declaration is in Bytes
 `ifndef GB
@@ -54,4 +54,4 @@
     `define GB              1
 `endif
 
-`define DEV_BASE_ADDRESS    32'h0
+`define APB4_SLV_DEV_BASE_ADDRESS    32'h0

@@ -33,7 +33,7 @@
 `include "ip_amba_apb4_m_top_defines.vh"
 `include "ip_amba_apb4_m_top_parameters.vh"
 
-module ip_amba_apb4_m_top `IP_AMBA_APB4_MASTER_PARAM_DECL (  
+module ip_amba_apb4_m_top `APB4_MST_DESIGN_ATTRIBUTES (  
 
     // APB Interface Side Signals
     // Global Inputs

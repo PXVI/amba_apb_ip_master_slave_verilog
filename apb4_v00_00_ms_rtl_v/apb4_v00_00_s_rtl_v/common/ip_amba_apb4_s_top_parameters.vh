@@ -30,15 +30,15 @@
 
  * ----------------------------------------------------------------------------------- */
 
-// Declaration Parameters
-// ----------------------
-`define IP_AMBA_APB4_SLAVE_PARAM_DECL #( \
-                                        parameter PRDATA_width = `PRDATA_width, \
-                                        parameter PWDATA_width = `PWDATA_width, \
-                                        parameter PSTRB_width = `PSTRB_width, \
-                                        parameter PADDR_width = `PADDR_width, \
-                                        parameter PSELx_width = `PSELx_width, \
-                                        parameter WORD_LENGTH = `PRDATA_width, \
-                                        parameter MEM_DEPTH = `MEM_ARRAY_SIZE_INT, \
-                                        parameter DEV_BASE_ADDRESS = `DEV_BASE_ADDRESS \
+// Design Attributes Parameters
+// -----------------------------
+`define APB4_SLV_DESIGN_ATTRIBUTES #( \
+                                        parameter PRDATA_width = `APB4_SLV_PRDATA_WIDTH, \
+                                        parameter PWDATA_width = `APB4_SLV_PWDATA_WIDTH, \
+                                        parameter PSTRB_width = `APB4_SLV_PSTRB_WIDTH, \
+                                        parameter PADDR_width = `APB4_SLV_PADDR_WIDTH, \
+                                        parameter PSELx_width = `APB4_SLV_PSEL_WIDTH, \
+                                        parameter WORD_LENGTH = `APB4_SLV_PRDATA_WIDTH, \
+                                        parameter MEM_DEPTH = `APB4_SLV_MEM_ARRAY_SIZE_INT, \
+                                        parameter DEV_BASE_ADDRESS = `APB4_SLV_DEV_BASE_ADDRESS \
                                         )
