@@ -6,63 +6,54 @@ The reason for adding version numbers for the IP is that the RTL is functionally
 
 ## Contents of the repository
 
-### APB3 Master Zero ( v00.00 )
+### APB3 Master Zero (v00.00)
 
 Located in: `apb3_v00_00_master_rtl_v/`
 
-- Generic application interface
+A fully compliant AMBA APB3 Master IP with comprehensive transaction control capabilities.
+
+**Features:**
+- Generic application/CPU interface for easy integration
 - Heavy user control for transaction initiations
 - Parameterized interface port widths
 - Fully compliant with the APB3 protocol
 - Complete granular support for interfacing with any kind of bridge
-- Additional support for the protocol timeout timers
+- Additional support for protocol timeout timers
+- Back-to-back transaction support
+- Asynchronous reset support
 
-#### Configuration and Naming Conventions
-
-The APB3 Master Zero RTL uses a unique naming convention with the `APB3_MST_` prefix to ensure no conflicts with other IPs. The following configuration defines are available in `common/ip_amba_apb_top_defines.vh`:
-
-- `APB3_MST_PSEL_TIMEOUT_CYCLES`: Timeout value for PSELx signal (default: 20 clock cycles)
-- `APB3_MST_PSTRB_WIDTH`: Write strobe width (default: 4)
-- `APB3_MST_PWDATA_WIDTH`: Write data width (default: 8 * PSTRB_WIDTH = 32)
-- `APB3_MST_PRDATA_WIDTH`: Read data width (default: 32)
-- `APB3_MST_PADDR_WIDTH`: Address width (default: 32)
-- `APB3_MST_PSEL_WIDTH`: Slave select width (default: 1)
-
-The module uses the `APB3_MST_DESIGN_ATTRIBUTES` macro (defined in `common/ip_amba_apb_top_parameters.vh`) for parameterized instantiation, which allows customization of all interface widths.
-
-#### Module Interface
-
-The top-level module `ip_amba_apb_master_top` provides:
-- Standard APB3 protocol signals (PCLK, PRESETn, PADDR, PWDATA, PRDATA, PSELx, PENABLE, PWRITE, PSTRB, PREADY, PSLVERR)
-- CPU-side control interface for transaction initiation
-- Timeout detection and error reporting
-- Full APB3 protocol state machine implementation
-
-### APB3 Slave Zero ( v00.00 )
+### APB3 Slave Zero (v00.00)
 
 **Note**: Ongoing Bug Fixes. Core is unusable at this moment.
 
+**Features:**
 - Generic memory supporting interface
 - Fully compliant with the APB3 protocol
 - Parameterized interface port widths
 - Modifiable granularity
 - No support for timeouts
 
-### APB3 Master One ( v00.00 )
+### APB3 Master One (v00.00)
 
+A lighter, simplified version of the APB3 Master IP.
+
+**Features:**
 - Simple interface
 - Easy transaction generation
-- Parameterized Design
+- Parameterized design
 - Full APB3 compliance
-- Lighter version (Easier to use and configure)
+- Lighter version (easier to use and configure)
 
-### APB3 Slave One ( v00.00 )
+### APB3 Slave One (v00.00)
 
+A lighter, simplified version of the APB3 Slave IP.
+
+**Features:**
 - Simple interface
 - Easy transaction generation
-- Parameterized Design
+- Parameterized design
 - Full APB3 Slave compliance
-- Light Version
+- Light version
 
 ## License
 
