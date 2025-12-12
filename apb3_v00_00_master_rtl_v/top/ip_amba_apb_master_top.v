@@ -33,7 +33,7 @@
 `include "ip_amba_apb_top_defines.vh"
 `include "ip_amba_apb_top_parameters.vh"
 
-module ip_amba_apb_master_top `IP_AMBA_APB_PARAM_DECL (  
+module ip_amba_apb_master_top `APB3_MST_DESIGN_ATTRIBUTES (  
 
     // APB Interface Side Signals
     // Global Inputs
@@ -330,7 +330,7 @@ module ip_amba_apb_master_top `IP_AMBA_APB_PARAM_DECL (
         if( !PRESETn )
         begin
             pselx_timeout_counter_r <= 'd0;
-            pselx_timeout_reg <= `ifdef PSELx_TIMEOUT_VAL `PSELx_TIMEOUT_VAL-1 `else 'd20-1 `endif;
+            pselx_timeout_reg <= `ifdef APB3_MST_PSEL_TIMEOUT_CYCLES `APB3_MST_PSEL_TIMEOUT_CYCLES-1 `else 'd20-1 `endif;
             pselx_timeout_flag_reg <= 1'b0;
         end
         else if( PSELx_r && PENABLE_r && PREADY )

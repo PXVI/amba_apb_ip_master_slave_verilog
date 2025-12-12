@@ -32,10 +32,10 @@
 
 // PSELx Timeout Value : In terms of Clock Cycles
 // ----------------------------------------------
-`define PSELx_TIMEOUT_VAL   20
+`define APB3_MST_PSEL_TIMEOUT_CYCLES   20
 
-`define PSTRB_width         4
-`define PWDATA_width        8 * `PSTRB_width
-`define PRDATA_width        32
-`define PADDR_width         32
-`define PSELx_width         1
+`define APB3_MST_PSTRB_WIDTH         4
+`define APB3_MST_PWDATA_WIDTH        8 * `APB3_MST_PSTRB_WIDTH
+`define APB3_MST_PRDATA_WIDTH        32
+`define APB3_MST_PADDR_WIDTH         32
+`define APB3_MST_PSEL_WIDTH         1

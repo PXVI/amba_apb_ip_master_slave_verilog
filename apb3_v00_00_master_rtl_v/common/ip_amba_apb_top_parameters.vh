@@ -30,12 +30,12 @@
 
  * ----------------------------------------------------------------------------------- */
 
-// Declaration Parameters
-// ----------------------
-`define IP_AMBA_APB_PARAM_DECL #( \
-                            parameter PRDATA_width = `PRDATA_width, \
-                            parameter PWDATA_width = `PWDATA_width, \
-                            parameter PSTRB_width = `PSTRB_width, \
-                            parameter PADDR_width = `PADDR_width, \
-                            parameter PSELx_width = `PSELx_width \
+// Design Attributes Parameters
+// -----------------------------
+`define APB3_MST_DESIGN_ATTRIBUTES #( \
+                            parameter PRDATA_width = `APB3_MST_PRDATA_WIDTH, \
+                            parameter PWDATA_width = `APB3_MST_PWDATA_WIDTH, \
+                            parameter PSTRB_width = `APB3_MST_PSTRB_WIDTH, \
+                            parameter PADDR_width = `APB3_MST_PADDR_WIDTH, \
+                            parameter PSELx_width = `APB3_MST_PSEL_WIDTH \
                             )
